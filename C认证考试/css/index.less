@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ucontainer{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+}
+
+// 导航栏
+.navheader{
+    width: 100%;
+    height: auto;
+    background-color: rgb(0, 169,255);
+    border: 1px solid rgb(0,169,255);
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        img{
+            width: 150px;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        span{
+            color: white;
+        }
+        form{
+            position: relative;
+            input{
+                border: 0;
+                width: 300px;
+                height: 30px;
+                color: white;
+                background-color: white;
+                border-radius: 15px;
+                opacity: .5;
+            }
+            button{
+                position: absolute;
+                left: 10px;
+                top: 5px;
+                border: 0;
+                width: 40px;
+                height: 20px;
+                color: #ccc;
+                border-radius: 10px;
+                opacity: .6;
+            }
+        }
+    }
+}
+
+
+// 轮播图
+.banner{
+    position: relative;
+    .carousel{
+        img{
+            min-width: 1000px;
+            min-height: 440px;
+        }
+        a{
+            padding-top: 70px;
+            padding-bottom: 70px;
+            height: 560px;
+            background-position: center;
+            background-size: cover;
+        }
+        a:first-child{
+            background-image: url("../img/2.jpg");   
+        }
+        a:nth-child(2){
+            background-image: url("../img/1.jpg");
+        }
+        a:nth-child(3){
+            background-image: url("../img/3.jpg");
+        }
+        a:nth-child(4){
+            background-image: url("../img/4.jpg");
+        }
+        a:nth-child(5){
+            background-image: url("../img/5.jpg");
+        }
+        .carousel-indicators{
+            position: absolute;
+            top: 440px;
+        }
+    }
+    .nav-top{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        opacity: .5;
+        ul{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           height: 70px;
+           a{
+            text-decoration: none;
+            color: black;
+           }
+           li:first-child{
+            background-color: rgb(0, 169,255);
+            width: 60px;
+            text-align: center;
+            border: 0;
+            border-radius: 15px;
+           }
+        }
+    }
+    .nav-bottom{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        opacity: .5;
+        background-color: white;
+        ul{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 70px;
+           a{
+            text-decoration: none;
+            color: black;
+           }
+           li{
+            margin-right: 20px;
+           }
+        }
+    }
+}
+
+.menue{
+    width: 100%;
+    margin-bottom: 30px;
+    .mcon{
+        display: flex;
+        justify-content: space-between;
+        section{
+            width: 60%;
+            height: 400px;
+            .mnav{
+                display: flex;
+                justify-content: space-between;
+                font-size: 25px;
+                line-height: 25px;
+                padding: 5px;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    position: relative;
+                    right: 15px;
+                    font-size: 18px;
+                    span{
+                        position: absolute;
+                        top: -2px;
+                    }
+                }
+            }
+            div{
+                background-color: #ccc;
+                height: 100%;
+            }
+        }
+        aside{
+            width: 40%;
+            height: 400px;
+            background-color: #ddd;
+            .mnav{
+                display: flex;
+                justify-content: space-between;
+                font-size: 25px;
+                line-height: 25px;
+                padding: 5px;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    position: relative;
+                    right: 15px;
+                    font-size: 18px;
+                    span{
+                        position: absolute;
+                        top: -2px;
+                    }
+                }
+            }
+            div{
+                background-color: #ccc;
+                height: 100%;
+            }
+        }
+    }
+}
+
+// 热门歌手
+.player{
+    width: 100%;
+    .pnav{
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        line-height: 25px;
+        font-size: 25px;
+        a{
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            width: 350px;
+            margin-right: 350px;
+        }
+    }
+    .ppanel{
+        display: flex;
+        justify-content: space-between;
+        li{
+            background-color: #ccc;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+        }
+    }
+}
+
+.aside{
+    position: fixed;
+    right: 20px;
+    top: 50vh;
+    width: 70px;
+    height: 280px;
+    border: 1px solid aquamarine;
+    box-shadow: 2px 2px 4px aquamarine;
+    ul{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        li{
+            margin-left: -33px;
+            width: 70px;
+            height: 70px;
+            box-sizing: content-box;
+            background-color: aquamarine;
+        }
+    }
+}
+
+footer{
+    height: 40px;
+    background-color: #333;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            float: left;
+            height: 40px;
+            width: 400px;
+        }
+        #button{
+            float: left;
+            width: 120px;
+            height: 40px;
+            border: 1px solid #ccc;
+            box-sizing: content-box;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <input type="text" placeholder="请输入验证码">
+        <button type="button" id="button">点击生成验证码</button>
+    </form>
+
+
+
+    <script>
+        //随机数的生成 
+        function m_random(min,max){
+            return parseInt(Math.random()*(max-min)+min);
+        }
+        let button=document.getElementById("button")
+        // 随机生成验证码
+        let pool="abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ1234567890";
+        let yan=""
+        let color=""
+
+        function y_func(){
+            for(var i=0;i<5;i++){
+                yan=pool[m_random(0,63)]+yan;
+            }
+        }
+        let r=m_random(150,255)
+        let g=m_random(150,255)
+        let b=m_random(150,255)
+        function y_color(){
+            color=`rgb(${r},${g},${b})`
+        }
+        button.onclick=function(){
+            y_func();
+            y_color();
+            button.innerHTML=yan
+            button.style.backgroundColor=color
+            button.style.color=`rgb(${m_random(0,150)},${m_random(0,150)},${m_random(0,150)})`
+            yan=''
+        }
+    </script>
+</body>
+</html>

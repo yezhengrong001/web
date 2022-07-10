@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ucontainer {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+}
+.navheader {
+  width: 100%;
+  height: auto;
+  background-color: #00a9ff;
+  border: 1px solid #00a9ff;
+}
+.navheader ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+.navheader ul img {
+  width: 150px;
+}
+.navheader ul a {
+  color: white;
+  text-decoration: none;
+}
+.navheader ul span {
+  color: white;
+}
+.navheader ul form {
+  position: relative;
+}
+.navheader ul form input {
+  border: 0;
+  width: 300px;
+  height: 30px;
+  color: white;
+  background-color: white;
+  border-radius: 15px;
+  opacity: 0.5;
+}
+.navheader ul form button {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  border: 0;
+  width: 40px;
+  height: 20px;
+  color: #ccc;
+  border-radius: 10px;
+  opacity: 0.6;
+}
+.banner {
+  position: relative;
+}
+.banner .carousel img {
+  min-width: 1000px;
+  min-height: 440px;
+}
+.banner .carousel a {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  height: 560px;
+  background-position: center;
+  background-size: cover;
+}
+.banner .carousel a:first-child {
+  background-image: url("../img/2.jpg");
+}
+.banner .carousel a:nth-child(2) {
+  background-image: url("../img/1.jpg");
+}
+.banner .carousel a:nth-child(3) {
+  background-image: url("../img/3.jpg");
+}
+.banner .carousel a:nth-child(4) {
+  background-image: url("../img/4.jpg");
+}
+.banner .carousel a:nth-child(5) {
+  background-image: url("../img/5.jpg");
+}
+.banner .carousel .carousel-indicators {
+  position: absolute;
+  top: 440px;
+}
+.banner .nav-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  opacity: 0.5;
+}
+.banner .nav-top ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+.banner .nav-top ul a {
+  text-decoration: none;
+  color: black;
+}
+.banner .nav-top ul li:first-child {
+  background-color: #00a9ff;
+  width: 60px;
+  text-align: center;
+  border: 0;
+  border-radius: 15px;
+}
+.banner .nav-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.5;
+  background-color: white;
+}
+.banner .nav-bottom ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+.banner .nav-bottom ul a {
+  text-decoration: none;
+  color: black;
+}
+.banner .nav-bottom ul li {
+  margin-right: 20px;
+}
+.menue {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.menue .mcon {
+  display: flex;
+  justify-content: space-between;
+}
+.menue .mcon section {
+  width: 60%;
+  height: 400px;
+}
+.menue .mcon section .mnav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  line-height: 25px;
+  padding: 5px;
+}
+.menue .mcon section .mnav a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  right: 15px;
+  font-size: 18px;
+}
+.menue .mcon section .mnav a span {
+  position: absolute;
+  top: -2px;
+}
+.menue .mcon section div {
+  background-color: #ccc;
+  height: 100%;
+}
+.menue .mcon aside {
+  width: 40%;
+  height: 400px;
+  background-color: #ddd;
+}
+.menue .mcon aside .mnav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  line-height: 25px;
+  padding: 5px;
+}
+.menue .mcon aside .mnav a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  right: 15px;
+  font-size: 18px;
+}
+.menue .mcon aside .mnav a span {
+  position: absolute;
+  top: -2px;
+}
+.menue .mcon aside div {
+  background-color: #ccc;
+  height: 100%;
+}
+.player {
+  width: 100%;
+}
+.player .pnav {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 25px;
+  font-size: 25px;
+}
+.player .pnav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+.player .pnav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  margin-right: 350px;
+}
+.player .ppanel {
+  display: flex;
+  justify-content: space-between;
+}
+.player .ppanel li {
+  background-color: #ccc;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+.aside {
+  position: fixed;
+  right: 20px;
+  top: 50vh;
+  width: 70px;
+  height: 280px;
+  border: 1px solid aquamarine;
+  box-shadow: 2px 2px 4px aquamarine;
+}
+.aside ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.aside ul li {
+  margin-left: -33px;
+  width: 70px;
+  height: 70px;
+  box-sizing: content-box;
+  background-color: aquamarine;
+}
+footer {
+  height: 40px;
+  background-color: #333;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+}
