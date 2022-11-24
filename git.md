@@ -16,4 +16,10 @@
 * `git commit -a -m '提交说明'`将所有修改文件进行提交
 
 5.查看提交日志：`git log`
-6.
+6.`git restore`
+* `git restore <filename>`在未提交前可将文件恢复至修改前的状态
+* `git restore --stage <filename>` 取消暂存状态
+  
+7.删除文件
+* `git rm <filename>`删除文件
+* `git rm -f <filename>`强制删除
