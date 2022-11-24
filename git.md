@@ -40,10 +40,27 @@
 ```
 4.合并分支
 ```js
-  // 所有分支合并为master分支
+  // 所有分支合并到自身分支分支
   git merge master
 ```
-5.删除分支
+5.切换并创建分支
+```js
+  git switch -c (branch)name
+```
+6.删除分支
 ```js
   git branch -d (branch)name
+```
+7.在开发中，都是在自己的分支上边写代码，代码完成后，再将自己的分支合并到主分支中。
+## 变基（rebase）
+在开发中除了用merge合并分支外，还有`rebase`。因为实际开发中过程繁琐，用`rebase`更好
+```js
+  git rebase master
+  //分支还未合并
+```
+## 远程仓库
+1.创建远程仓库
+```js
+  git remote url
+
 ```
