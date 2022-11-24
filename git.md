@@ -43,3 +43,7 @@
   // 所有分支合并为master分支
   git merge master
 ```
+5.删除分支
+```js
+  git branch -d (branch)name
+```
