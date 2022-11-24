@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>promise初体验</title>
+	</head>
+	<body>
+		<h3>promise</h3>
+		<hr>
+		<button id = 'btn'>点击抽奖</button>
+		<script>
+			// 生成随机数
+			function rand(m,n){
+				return Math.floor( Math.random()*(n-m+1) ) + m-1;
+			}
+			const btn = document.getElementById('btn');
+			
+			btn.onclick=function(){
+				// setTimeout(()=>{
+				// 	let n =rand(1,100);
+				// 	if(n<=30){
+				// 		alert("恭喜中奖")
+				// 	}
+				// 	else{
+				// 		alert("再接再厉")
+				// 	}
+				// },1000);
+				
+				// reject 拒绝
+				const p = new Promise((resolve,reject)=>{
+					// console.log(resolve)
+					// console.log(reject)
+					setTimeout(()=>{
+						let n =rand(1,100);
+						if(n<=30){
+							resolve(n);//状态成功
+							// alert("恭喜中奖")
+						}
+						else{
+							reject(n);//状态失败
+							// alert("再接再厉")
+						}
+					},1000);
+				});
+			p.then((value)=>{console.log(`中奖${value}`);},(reason)=>{console.log(`再接再厉${reason}`);});
+		}
+		</script>
+	</body>
+</html>

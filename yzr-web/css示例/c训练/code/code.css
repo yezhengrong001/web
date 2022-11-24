@@ -1,0 +1,41 @@
+/* 内外边距置零 */
+*{
+	margin: 0px;
+	padding: 0px;
+}
+/* 页面头不区域 */
+header>h1{
+	color: #39506c;
+	font-size: 40px;
+	border: 1px solid #000000;
+}
+header>p{
+	color: #39506c;
+	font-size: 24px;
+}
+/* 导航栏 */
+header>nav{
+	width: 100%;
+	height: 70px;
+	background-color: #39506c;
+}
+header>nav>ul{
+	list-style: none;
+}
+header>nav>ul>li{
+	width: 20%;
+	height: 70px;
+	display: inline-block;
+	line-height: 70px;
+}
+header>nav>ul>li>a{
+	color:white;
+	font-size: 22px;
+	text-decoration: none;
+	text-align: center;
+}
+/* 大图区 */
+/* 特色部分 */
+/* 表单 */
+/* 侧边栏 */
+/* 页脚 */

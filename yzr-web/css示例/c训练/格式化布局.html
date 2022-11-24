@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>格式化布局</title>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			a{
+				font-weight: bold;
+				color: red;
+				font-size: 20px;
+			}
+			h1{
+				font-size: 40px;
+			}
+			.container{
+				display: block;
+				width:1280px;
+				height: 100%;
+				background-color: red;
+				margin: 0 auto;
+			}
+			.header-wapper{
+				width: 100%;
+				height: 80px;
+			}
+			.banner-wapper{
+				width: 100%;
+				height: 480px;
+			}
+			.main-wapper{
+				width: 100%;
+				height: 480px;
+			}
+			.footer-wapper{
+				width: 100%;
+				height: 80px;
+			}
+			.header-nav{
+				background-color: antiquewhite;
+				text-align: center;
+			}
+			.header-nav>ul{
+				display: inline-block;
+				width: 640px;
+				height: 100%;
+				border: 1px solid red;
+				list-style: none;
+				/* 去间隔对于inline-black */
+				 margin-right: -4px;
+			}
+			.header-nav li{
+				display: inline-block;
+				width: 80px;
+				height: auto;
+				background-color: aqua;
+				text-align: center;
+				line-height: 80px;
+				margin-right: -4px;
+			}
+			.header-nav a{
+				text-decoration: none;
+				color: white;
+			}
+			.banner-content{
+				background-color: aliceblue;
+				line-height: 480px;
+				text-align: center;
+			}
+			.banner-section{
+				display: inline;
+				background-color: red;
+			}
+			.img{
+				display: inline-block;
+				width: 480px;
+				height: 480px;
+				background-color: red;
+				margin: -4px;
+				margin-left: 0px;
+			}
+			.main-content{
+				background-color: blue;
+			}
+			.footer-content{
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header-wapper">
+			<div class="container header-nav">
+				<nav class="header-nav">
+					<h1>jcgh</h1>
+					<ul>
+						<li><a href="">首页</a></li>
+						<li><a href="">首页</a></li>
+						<li><a href="">首页</a></li>
+						<li><a href="">首页</a></li>
+						<li><a href="">首页</a></li>
+						<li><a href="">首页</a></li>
+						<li><a href="">首页</a></li>
+						<li><a href="">首页</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="banner-wapper">
+			<div class="container banner-content">
+				<div class="banner-section">
+					<div class="img">hdf</div>
+					<div class="img">chfg</div>
+				</div>
+			</div>
+		</div>
+		<main class="main-wapper">
+			<div class="container main-content">
+				<section>cdnmbfvhgd</section>
+			</div>
+		</main>
+		<footer class="footer-wapper">
+			<div class="container footer-content">
+				<section>hxgdgffg</section>
+			</div>
+		</footer>
+	</body>
+</html>

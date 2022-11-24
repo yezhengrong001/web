@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>客户端</title>
+	</head>
+	<body>
+		<h1>欢迎来到express中和运用</h1>
+		<ul>
+			<li id='li1'></li>
+			<li id='li2'></li>
+			<li id='li3'></li>
+			<li id='li4'></li>
+		</ul>
+		<hr>
+		<form action='http://127.0.0.1:8080/formData' method='post'
+		enctype='multiport/form-data'>
+			<input type='text' name="username" placeholder='请输入'/>
+			<input type='password' name="password" placeholder='密码'/>
+			<button type='submmit'>提交</button>
+		</form>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script type='text/javascript'>
+			
+			// async function requestAxios(){
+			// 	retrun axios.get('http://127.0.0.1:8080/demo01.json')
+			// }
+			// requestAxios().then((value)=>{
+			// 	console.log(value)
+			// },(err)=>{
+			// 	console.log(err)
+			// })
+			$.get('http://127.0.0.1:8080/demo01.json',(data,status)=>{
+				for(let i=1;i<5;i++){
+					let newData = JSON.parse(data)
+					console.log(newData.data[i-1].message)
+					document.getElementById('li'+i).innerHTML = newData.data[i-1].message;
+					
+					console.log("data",newData.data[i-1].message,"status",status)
+				}
+				
+			})
+			
+			
+			console.log($('h1'));
+			
+		</script>
+	</body>
+</html>

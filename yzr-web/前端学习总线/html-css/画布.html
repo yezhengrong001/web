@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>画布</title>
+	</head>
+	<body>
+		<!-- 
+		 什么是 Canvas？
+		 HTML5 的 <canvas> 元素使用 JavaScript 在网页上绘制图像。
+		 
+		 画布是一个矩形区域，您可以控制其每一像素。
+		 
+		 canvas 拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。
+		 -->
+		<canvas id='myCanvas' width='200' height="100" style="border: 1px solid;"></canvas>
+		
+		<script>
+			const myCanvas = document.getElementById('myCanvas');
+			// 获取画笔
+			const ctx = myCanvas.getContext('2d');
+			// ctx.moveTo(0,0);
+			// ctx.lineTo(200,100);
+			// // 画笔结束
+			// ctx.stroke();
+			
+			// // 画圆
+			// ctx.beginPath();
+			// ctx.arc(95,50,40,0,2*Math.PI);
+			// ctx.stroke();
+			
+			// // 绘制文本
+			// ctx.font = '30px Arial';
+			// ctx.fillText('Hello World',10,55);
+			
+			// // stroke 文本
+			// ctx.font = '30px Arial';
+			// ctx.strokeText("Hello World",15,55);
+			/* 
+			canvas 画布画图步骤：
+			 1.找到画布canvas元素:const canvas = document.getElementById("ID");
+			 2.创建绘图对象：const ctx = canvas.getContext('2d');
+			 3.在画布上画图
+			 */ 
+			
+			/* 
+			 画布坐标：
+			 画布坐标
+			 HTML 画布是一个二维网格。
+			 
+			 画布左上角坐标是 (0,0)
+			 
+			 在上一章中，您看到了使用的方法: fillRect(0,0,150,75)
+			 
+			 这意味着：从左上角 (0,0) 开始，绘制一个 150x75 像素的矩形。
+			 */
+			/* 
+			画布 - 渐变
+			渐变可以用来填充矩形、圆、线、文本等。画布上的形状不限于纯色。
+			
+			有两种不同类型的渐变:
+			
+			createLinearGradient(x,y,x1,y1) - 创建线性渐变
+			createRadialGradient(x,y,r,x1,y1,r1) - 创建径向/圆形渐变
+			一旦我们有了渐变对象，我们必须添加两个或更多的颜色停止。
+			
+			addColorStop() 方法指定颜色停止点及其沿渐变的位置。渐变位置可以是0到1之间的任意位置。
+			
+			要使用渐变，请将 fillStyle 或 strokeStyle 属性设置为渐变，然后绘制形状（矩形、文本或直线）。 
+			 */
+			// const grd=ctx.createLinearGradient(0,0,200,0);
+			// grd.addColorStop(0,'red');
+			// grd.addColorStop(1,'white');
+			// ctx.fillStyle = grd
+			// ctx.fillRect(10,10,180,80);
+			// 圆形径变
+			const grd = ctx.createRadialGradient(20,20,100,0,0,30);
+			grd.addColorStop(0,'red');
+			grd.addColorStop(1,'green');
+			ctx.fillStyle = grd
+			ctx.fillRect(10,10,180,80);
+			
+		</script>
+	</body>
+</html>

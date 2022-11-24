@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+swiper {
+  height: 330rpx;
+}
+swiper .swiper-item,
+swiper image {
+  width: 100%;
+  height: 100%;
+}
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+.nav-list .nav-img {
+  width: 128rpx;
+  height: 140rpx;
+}
+.floor-title {
+  height: 60rpx;
+  width: 100%;
+  display: flex;
+}
+.right-img-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.floor-img-box {
+  display: flex;
+  padding-left: 10rpx;
+}
+.search-box {
+  /* // 设置定位效果为“吸顶” */
+  position: -webkit-sticky;
+  position: sticky;
+  /* // 吸顶的“位置” */
+  top: 0;
+  /* // 提高层级，防止被轮播图覆盖 */
+  z-index: 999;
+}
+
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.uni-searchbar {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 16rpx;
+  /* 将默认的 #FFFFFF 改为 #C00000 */
+  background-color: #c00000;
+}
+.search-box {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.sugg-list {
+  padding: 0 5px;
+}
+.sugg-list .sugg-item {
+  font-size: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid #efefef;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sugg-list .sugg-item .goods-name {
+  /* // 文字不允许换行（单行文本） */
+  white-space: nowrap;
+  /* // 溢出部分隐藏 */
+  overflow: hidden;
+  /* // 文本溢出后，使用 ... 代替 */
+  text-overflow: ellipsis;
+  margin-right: 3px;
+}
+.history-box {
+  padding: 0 5px;
+}
+.history-box .history-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  font-size: 13px;
+  border-bottom: 1px solid #efefef;
+}
+.history-box .history-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.history-box .history-list .uni-tag {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+

@@ -1,0 +1,260 @@
+<!-- 不分大小写 告诉HTML版本 必须在网页第一行 -->
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<!-- 保证网页不乱码 -->
+		<meta charset="UTF-8"/>
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="description" content="Free Web tutorials">
+		<meta name="author" content="John Doe">
+		<!-- 定义页面刷新间隔时间 -->
+		<meta http-equiv="refresh" content="30">
+		<!-- 网页与设备适配 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>HTML标签复习</title>
+		<style>
+			*{
+				/* margin: 0;
+				padding: 0; */
+				/* list-style-type: none; */
+			}
+			a:link{
+				text-decoration: none;
+				color: blue;
+			}
+			a:visited{
+				text-decoration: none;
+				color: blueviolet;
+			}
+			a:hover{
+				text-decoration: none;
+				color:lightskyblue;
+			}
+			a:active{
+				text-decoration: none;
+				color:darkblue;
+			}
+			tr:nth-child(even){
+				background-color: antiquewhite;
+			}
+			/* odd 奇数 even偶数 */
+			tr:nth-child(odd){
+				background-color: aqua;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 标题标签 h1-h6 块级标签-->
+		<h1 id='h1'>h1</h1>
+		<h2>h2</h2>
+		<h3>h3</h3>
+		<h4>h4</h4>
+		<h5>h5</h5>
+		<h6>h6</h6>
+		<!-- 段落标签 块级标签-->
+		<p>p标签</p>
+		<!-- 超连接 内联标签-->
+		<!-- target属性 属性值由 _blank _top _self _parent -->
+		<!-- 连接颜色 link visited hover active -->
+		<a href='#'>a标签（超连接，网页间跳转）</a>
+		<a href="#h1">锚链接(页面内跳转)</a>
+		<a href="mailto:someone@example.com">Send email</a>
+		<!-- 图像 块级标签-->
+		<img src="" alt="提示是什么图片"/>
+		<!-- 图像映射 -->
+		<!-- 
+		 <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+		 
+		 <map name="workmap">
+		   <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+		   <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+		   <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+		 </map>
+		 -->
+		 <!-- 针对不同的屏幕大小显示不同的图像 -->
+		 <!-- <picture>
+			  <source media="(min-width: 650px)" srcset="img_food.jpg">
+			  <source media="(min-width: 465px)" srcset="img_car.jpg">
+			  <img src="img_girl.jpg">
+			</picture> -->
+		<!-- 自动显示满足格式的第一张图片 -->
+		<!-- <picture>
+			  <source srcset="img_avatar.png">
+			  <source srcset="img_girl.jpg">
+			  <img src="img_beatles.gif" alt="Beatles" style="width:auto;">
+		</picture> -->
+		<!-- 表格标签完整版 -->
+		<table border="1">
+			<caption>表格标题</caption>
+			<tr>
+				<th>h1</th>
+				<th>h2</th>
+				<th colspan="2">h3</th>
+			</tr>
+			<tr>
+				<td rowspan="2">td</td>
+				<td >td</td>
+				<td >td</td>
+				<td >td</td>
+			</tr>
+			<tr>
+				<td >td</td>
+				<td >td</td>
+				<td >td</td>
+			</tr>
+			<tr>
+				<td >td</td>
+				<td >td</td>
+				<td >td</td>
+				<td >td</td>
+			</tr>
+			<tr>
+				<td >td</td>
+				<td >td</td>
+				<td >td</td>
+				<td >td</td>
+			</tr>
+		</table>
+		<!-- 三种列表 -->
+		<ul>
+			<li>无序列表</li>
+		</ul>
+		<ol>
+			<li>有序列表</li>
+		</ol>
+		<dl>
+			<dt>列标题</dt>
+			<dd>列元素</dd>
+		</dl>
+		<!-- 网页内显示网页 -->
+		<iframe src="html复习.html" frameborder="0"></iframe>
+		<!-- 语义标签 -->
+		<article>文章内容</article>
+		<aside>侧边栏</aside>
+		<details>细节描述</details>
+		<figure>新闻图片放置区</figure>
+		<figcaption>图文描述</figcaption>
+		<footer>页脚</footer>
+		<main>内容主体</main>
+		<mark>标记</mark>
+		<nav>导航</nav>
+		<section>节,部分</section>
+		<summary>摘要</summary>
+		<time>djh</time>
+		<!-- form 属性有： -->
+		<!-- 
+		 novalidate 属性是 <form> 属性。
+		 
+		 如果已设置，novalidate 属性规定在提交时不应验证所有表单数据。
+		 -->
+		<!-- target:跳转页面位置 -->
+		<!-- action: 发送数据URL-->
+		<!-- method:发送请求的方式 -->
+		<!-- input form类属性 -->
+		<!-- input 的 formaction 属性规定当提交表单时，对输入（数据）进行处理的文件的 URL。 -->
+		<!-- input 的 formenctype 属性指定提交时应如何编码表单数据（仅适用于 method="post" 的表单）。 -->
+		<!-- input 的 formmethod 属性定义了将表单数据发送到 action URL 的 HTTP 方法。 -->
+		<!-- input 的 formtarget 属性指定一个名称或关键字，该名称或关键字规定在提交表单后在何处显示收到的响应。 -->
+		<!-- input 的 formnovalidate 属性规定提交时不应验证 <input> 元素。 -->
+		<!-- 表单输入属性 -->
+		<!-- 
+		 1.value
+		 2.readonly 属性规定输入字段为只读（不能修改）
+		 3.disabled 属性规定输入字段是禁用的
+		 4.size 属性规定输入字段的尺寸（以字符计）
+		 5.maxlength 属性规定输入字段允许的最大长度
+		 6.min 和 max 指定输入字段的最小值和最大值
+		 7.multiple属性是布尔属性。
+		 如果设置，则规定允许用户在 input 元素中输入一个以上的值。
+		 multiple 属性适用于以下输入类型：email 和 file。
+		 8.pattern 属性规定用于检查 input 元素值的正则表达式。
+		pattern 属性适用于以下输入类型：text、search、url、tel、email、password。
+		 9.placeholder 属性规定用以描述输入字段预期值的提示（样本值或有关格式的简短描述）。
+		 10.required 属性是布尔属性。如果设置，则规定在提交表单之前必须填写输入字段。
+		 11.step 属性规定 input 元素的合法数字间隔。
+		 12.autofocus 属性是布尔属性。如果设置，则规定当页面加载时 input 元素应该自动获得焦点。
+		 13.autocomplete 属性规定表单或输入字段是否应该自动完成。
+		 
+		 
+		 -->
+		<!-- 表单元素 -->
+		<form action="#">
+			<legend>表单标题</legend>
+			<label for="input"></label>
+			<input type="text" name='input' value='输入框'/>
+			<select name="" id="" >
+				<option value="选择框">不得分不高</option>
+			</select>
+			<textarea name="" id="" cols="30" rows="10">文本框</textarea>
+			<button>按钮</button>
+			<fieldset>表单数据分组</fieldset>
+			<input list="list" value="list">
+			<datalist id='list'>
+				<option value="kcjhf">
+				<option value="kcjhf">
+				<option value="kcjhf">
+			</datalist>
+			<!-- 输入类型 -->
+			<input type="button">
+			<input type="checkbox">
+			<input type="color">
+			<input type="date">
+			<input type="datetime-local">
+			<input type="email">
+			<input type="file">
+			<input type="hidden">
+			<input type="image">
+			<input type="month">
+			<input type="number">
+			<input type="password">
+			<input type="radio">
+			<input type="range">
+			<input type="reset">
+			<input type="search">
+			<input type="submit">
+			<input type="tel">
+			<input type="text">
+			<input type="time">
+			<input type="url">
+			<input type="week">
+		</form>
+		<!-- 多媒体 -->
+		<video controls autoplay>
+			<source src="#">
+			<source src="#">
+			Your browser does not support the video tag.
+		</video>
+		<audio controls autoplay>
+			<source src="#">
+			<source src="#">
+			Your browser does not support the video tag.
+		</audio>
+		
+		<!-- 
+		 警告！
+		 
+		 大多数浏览器不再支持 Java Applet 和插件。
+		 
+		 所有浏览器均不再支持 ActiveX 控件。
+		 
+		 在现代浏览器中，对 Shockwave Flash 的支持也已关闭
+		 <object> 元素
+		 所有浏览器均支持 <object> 元素。
+		 
+		 <object> 元素定义 HTML 文档中的嵌入式对象。
+		 
+		 它旨在将插件（例如 Java applet、PDF 阅读器和 Flash 播放器）嵌入网页中，但也可以用于将 HTML 包含在 HTML 中：
+		 -->
+		 <!-- 示例如下 -->
+		 <object data="audi.jpeg"></object>
+		 <!-- 
+		  <embed> 元素
+		  所有主要浏览器均支持 <embed> 元素。
+		  
+		  <embed> 元素也可定义了 HTML 文档中的嵌入式对象。
+		  
+		  Web 浏览器长期以来一直支持 <embed> 元素。但是，它不属于 HTML5 之前的 HTML 规范的一部分。
+		  -->
+	</body>
+</html>

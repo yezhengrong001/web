@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			ul{
+				float: left;
+				list-style: none;
+				height:400px;
+				width: auto;
+				display: inline-block;
+				padding-left: 20px;
+			}
+			.d1>ul{
+				background-color: gray;
+				margin-top: 20px;
+			}
+			.d2>ul{
+				background-color: lightgray;
+				margin-top: 20px;
+			}
+			.d3>ul{
+				background-color: white;
+				margin-top: 20px;
+				margin-left: -20px;
+			}
+			.d1>ul>li{
+				width:auto;
+				height: 40px;
+				margin-top: 0px;
+				margin-left: -20px;
+				background-color: lightgray;
+				line-height: 40px;
+				text-align: left;
+				vertical-align: middle;
+			}
+			.d2>ul>li{
+				width:auto;
+				height: 40px;
+				margin-top: 0px;
+				margin-left: -20px;
+				background-color: lightgray;
+				line-height: 40px;
+				text-align: left;
+				vertical-align: middle;
+				border-top: 1px solid #808080;
+				border-bottom: 1px solid #808080;
+			}
+			.d3>ul>li:first-child{
+				list-style-type: arabic-indic;
+				border-bottom: 1px solid #808080;
+			}
+			.d3>ul>li{
+				width:auto;
+				height: 40px;
+				margin-top: 0px;
+				padding-left: -20px;
+				background-color: whitesmoke;
+				line-height: 40px;
+				text-align: left;
+				vertical-align: middle;
+			}
+			.d2>ul{
+				display: none;
+			}
+			.d3>ul{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="d1">
+				<ul>
+					<li>解决方案&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p style="font-weight: bolder; display:block;float:right;">&gt;</p></li>
+				</ul>
+			</div>
+			<div class="d2">
+				<ul>
+					<li>通用解决方案&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p style="font-weight: bolder; display:block;float:right;">&gt;</p></li>
+					<li>行业解决方案</li>
+					<li>运至大数据与AI</li>
+					<li>区块链解决方案</li>
+				</ul>
+			</div>
+			<div class="d3">
+				<ul>
+					<li>网络安全</li>
+					<li>DDoS防护</li>
+					<li>云防火墙</li>
+					<li>网络入侵防护系统</li>
+					<li>样本智能分析平台</li>
+					<li>高级威胁检测系统</li>
+				</ul>
+			</div>
+		</div>
+		<script>
+			var d1=document.querySelector(".d1>ul>li")
+			var d2=document.querySelector(".d2>ul")
+			var d=document.querySelector(".d2>ul>li:first-child")
+			var d3=document.querySelector(".d3>ul")
+			d1.onmouseover=function funct(){
+				d2.style="display:block";
+			}
+			d.onmouseover=function funct1(){
+				d3.style="display:block";
+			}
+			d2.onmouseleave=function funct1(){
+				d2.style="display:none";
+			}
+			d3.onmouseenter=function f(){
+				d2.style="display:block";
+			}
+			d3.onmouseleave=function fun3(){
+				d3.style="display:none";
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.div1{
+				display: block;
+				float: left;
+				width: 200px;
+				height: 200px;
+				background-color: aqua;
+				background-image: linear-gradient(red,yellow);
+			}
+			.div5{
+				display: block;
+				float: left;
+				width: 200px;
+				height: 200px;
+				background-color: aqua;
+				background-image: radial-gradient(red,yellow);
+			}
+			.div2{
+				display: block;
+				float: left;
+				width: 200px;
+				height: 200px;
+				background-color: aqua;
+				background-image: linear-gradient(180deg,red,yellow);
+			}
+			.div3{
+				display: block;
+				float: left;
+				width: 200px;
+				height: 200px;
+				background-color: aqua;
+				background-image: linear-gradient(to top right,red,yellow,green,blue);
+			}
+			.div4{
+				clear: both;
+				height: 200px;
+				background-color: aqua;
+				background-image: repeating-linear-gradient(red,yellow 5%,green 5%,blue 5%,yellow 5%);
+			}
+			/* 重复渐变 非线性渐变 */
+			.div6{
+				clear: both;
+				height: 200px;
+				background-color: aqua;
+				background-image: repeating-radial-gradient(aqua 5%,blue 10%,red 5%) ;
+			}
+			#grad1 {
+			  height: 200px;
+			  background-color: red; /* For browsers that do not support gradients */
+			  background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+			}
+			
+			#grad2 {
+			  height: 200px;
+			  background-color: red; /* For browsers that do not support gradients */
+			  background-image: repeating-linear-gradient(45deg,red,yellow 7%,green 10%);
+			}
+			
+			#grad3 {
+			  height: 200px;
+			  background-color: red; /* For browsers that do not support gradients */
+			  background-image: repeating-linear-gradient(190deg,red,yellow 7%,green 10%);
+			}
+			
+			#grad4 {
+			  height: 200px;
+			  background-color: red; /* For browsers that do not support gradients */
+			  background-image: repeating-linear-gradient(90deg,red,yellow 7%,green 10%);
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 线性渐变 -->
+		<div class="div1"></div>
+		<div class="div2"></div>
+		<div class="div3"></div>
+		<div class="div4"></div>
+		<div class="div5" style="font-size: 30px;font-family: 华文行楷;color: antiquewhite;">一天的美好</canvas></div>
+		<div class="div6"></div>
+		<h1>Repeating Linear Gradient</h1>
+		
+		<div id="grad1"></div>
+		
+		<p>A repeating gradient on 45deg axe starting red and finishing green:</p>
+		<div id="grad2"></div>
+		
+		<p>A repeating gradient on 190deg axe starting red and finishing green:</p>
+		<div id="grad3"></div>
+		
+		<p>A repeating gradient on 90deg axe starting red and finishing green:</p>
+		<div id="grad4"></div>
+	</body>
+</html>

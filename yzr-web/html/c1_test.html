@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			height: 100vh;
+			background-image: url("img/landing-page.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+		.container{
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			background-color: rgba(0, 0, 0, .5);
+		}
+		h1{
+			color: white;
+			font-size: 3rem;
+		}
+		section{
+			display: flex;
+			justify-content: center;
+		}
+		.item{
+			font-size: 1rem;
+			color: white;
+			margin: 0.5rem;
+			margin-right: 1rem;
+			margin-left: 1rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>新年倒计时</h1>
+		<section>
+			<div class="item">
+				<p id="day">100</p>
+				<p>天数</p>
+			</div>
+			<div class="item">
+				<p id="hour">10</p>
+				<p>小时</p>
+			</div>
+			<div class="item">
+				<p id="min">10</p>
+				<p>分钟</p>
+			</div>
+			<div class="item">
+				<p id="sec">10</p>
+				<p>秒</p>
+			</div>
+		</section>
+	</div>
+	
+	<script >
+		var dday=document.getElementById('day')
+		var dhour=document.getElementById("hour")
+		var dmin=document.getElementById("min")
+		var dsec=document.getElementById("sec")
+		
+		var timer=null;//计时器
+		 
+		 timer=setInterval(function(){
+			 // 获取当前时间戳
+			 var data=new Date()
+			 var data1=new Date("2023-1-1 00:00:00")
+			 var dis=data1.getTime()-data.getTime()
+			 var time= parseInt(dis/1000)
+			 var day=time/(24*60*60)
+			 dday.innerHTML=Math.floor(day)
+			 var hour=time%(24*60*60)/(60*60)
+			 dhour.innerHTML=Math.floor(hour)
+			 var min=time%(60*60)/60
+			 dmin.innerHTML=Math.floor(min)
+			 var sec=time%60
+			 dsec.innerHTML=Math.floor(sec)
+		 },1000)
+	</script>
+</body>
+</html>

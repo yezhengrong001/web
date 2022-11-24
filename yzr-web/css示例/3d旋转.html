@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.div1{
+				display: block;
+				width: 200px;
+				height: 200px;
+				background-color: #00FFFF;
+				transform: rotateX(50deg) rotateY(50deg) rotateZ(50deg);
+			}
+			.div2{
+				display: block;
+				width: 200px;
+				height: 200px;
+				background-color: #00FFFF;
+				transition: width 2s,height 3s,background-color 3s;
+			}
+			.div2:hover{
+				width: 500px;
+				height: 400px;
+				background-color: #eeeeee;
+			}
+			.div3{
+				width: 300px;
+				height: 300px;
+				background-color: #eeeeee;
+				/* 名字 */
+				animation-name: div;
+				/* 执行时间 */
+				animation-duration: 3s;
+				/* 延迟 */
+				animation-delay: 3s; 
+			}
+			@keyframes div{
+				from{
+					width: 400px;
+					height: 400px;
+					background-color: red;}
+				to{
+					width: 300px;
+					height: 300px;
+					background-color: lawngreen;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1"> niaho </div>
+		<div class="div2"></div>
+		<div class="div3"></div>
+		<div class="div4"></div>
+		<div class="div5"></div>
+		<div class="div6"></div>
+	</body>
+</html>

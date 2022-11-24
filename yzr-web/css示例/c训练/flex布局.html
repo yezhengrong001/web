@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+				box-sizing: border-box;
+			}
+			ul{
+				list-style: none;
+			}
+			li{
+				float: left;
+			}
+			.container{
+				display: flex;
+				justify-content: center;
+				background-color: #333333;
+			}
+			.navcon{
+				display: flex;
+				justify-content: space-between;
+				width: 80%;
+				height: 40px;
+				line-height: 40px;
+			}
+			.navcon a{
+				text-decoration: none;
+				color: #999;
+			}
+			.navcon li:last-child{
+				margin-right: 0px;
+			}
+			.navcon li{
+				margin-right: 40px;
+			}
+			.banner{
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				padding-top: 40px;
+				background-color: #943567;
+				height: 500px;
+			}
+			.adv{
+				display: flex;
+				justify-content: center;
+				background-color: aqua;
+			}
+			.adv>div{
+				width: 80%;
+				border: 1px solid red;
+				flex-direction: column;
+			}
+			.advcon{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.advcon li{
+				clear: both;
+				width: 25%;
+				height: 50px;
+				border: 1px solid red;
+				background-color: aquamarine;
+			}
+			.main{
+				display: flex;
+				justify-content: center;
+			}
+			.maincon{
+				display: flex;
+				justify-content: baseline;
+				width: 80%;
+			}
+			.aside{
+				order: 1;
+				flex-basis: 30%;
+				border: #999;
+				border-radius: 10px;
+				height: 300px;
+				background-color: #eee;
+			}
+			.section{
+				order: 2;
+				flex-basis: 70%;
+				border: #999;
+				border-radius: 10px;
+				height: 300px;
+				background-color: #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="container">
+			<div class="navcon">
+				<ul>
+					<li><a href="#">品牌</a></li>
+					<li><a href="#">OriginOS</a></li>
+					<li><a href="#">体验店</a></li>
+					<li><a href="#">社区</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">下载app</a></li>
+					<li><a href="#">购物车</a></li>
+					<li><a href="#">个人中心</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="banner">
+			<nav class="navcon">
+				<ul class="logostart">
+					<li><a href="#">VIVO</a></li>
+				</ul>
+				<ul class="navlink">
+					<li><a href="#">LINK</a></li>
+					<li><a href="#">LINK</a></li>
+					<li><a href="#">LINK</a></li>
+					<li><a href="#">LINK</a></li>
+					<li><a href="#">LINK</a></li>
+					<li><a href="#">LINK</a></li>
+					<li><a href="#">商城</a></li>
+					<li><a href="#">服务</a></li>
+				</ul>
+				<ul class="logoend">
+					<li><a href="#">$</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="adv">
+			<div>
+				<ul class="advcon">
+					<li><a href="#">@</a></li>
+					<li><a href="#">@</a></li>
+					<li><a href="#">@</a></li>
+					<li><a href="#">@</a></li>
+				</ul>
+				<ul class="advcon">
+					<li><a href="#">@</a></li>
+					<li><a href="#">@</a></li>
+					<li><a href="#">@</a></li>
+					<li><a href="#">@</a></li>
+				</ul>
+			</div>
+		</div>
+		<main class="main">
+			<div class="maincon">
+				<section class="section"></section>
+				<aside class="aside"></aside>
+			</div>
+		</main>
+	</body>
+</html>

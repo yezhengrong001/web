@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>promise ajax封装</title>
+	</head>
+	<body>
+		<h3>promise</h3>
+		<hr>
+		<button id = 'btn'>发送ajax请求</button>
+		<script>
+			const btn = document.getElementById('btn');
+			//接口网址：http://api.apiopen.top/getJoke;
+			btn.onclick=()=>{
+				const p = new Promise((resolve,reject)=>{
+					const xhr =new XMLHttpRequest()
+					// xhr.setRequestHeader('Access-Control-Allow-Origin','*');
+					xhr.open('GET','https://api.apiopen.top/getJoke');
+					xhr.send();
+					xhr.onreadystatechange=()=>{
+						if(xhr.readyState=4&&(xhr.status>=200&&xhr.status<=300)){
+							resolve(xhr.response)
+						}
+						else{
+							reject(xhr.status);
+						}
+					}
+				})
+				p.then((value)=>{
+					console.log(value)
+				},(reason)=>{
+					console.log(reason)
+				})
+			}
+		</script>
+	</body>
+</html>

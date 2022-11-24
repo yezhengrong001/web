@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<script src="./bootstrap.min.js"></script>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+				box-sizing: border-box;
+			}
+			
+			.nav{
+				position: sticky;
+				top:0px;
+				position: relative;
+				grid-area:nav;
+				width: 100%;
+				height: 50px;
+				background-color: #000000;
+			}
+			.nav1{
+				grid-area:nav1;
+				height: 50px;
+				line-height: 50px;
+				width: 100%;
+				background-color: lightgreen;
+			}
+			.section1{
+				grid-area:section1;
+				width: 100%;
+				height:auto;
+				background-color: #0000FF;
+			}
+			.section2{
+				grid-area:section2;
+				width: 100%;
+				height: auto;
+				background-color: #008000;
+			}
+			.section3{
+				grid-area:section3;
+				width: 100%;
+				height: auto;
+				background-color: #00FFFF;
+			}
+			.section4{
+				grid-area:section4;
+				width: 100%;
+				height: auto;
+				background-color: #2E8B57;
+			}
+			.footer{
+				grid-area:footer;
+				width: 100%;
+				height: 50px;
+				background-color: #808000;
+			}
+			
+			.nav>div>ul:first-child{
+				position: relative;
+				list-style: none;
+				float: left;
+				line-height: 50px;
+			}
+			.nav>div>ul:last-child{
+				list-style: none;
+				position: absolute;
+				right: 40px;
+				top:0px;
+			}
+			.nav>div>ul:first-child>li{
+				width: auto;
+				display: inline;
+				height: 50px;
+				line-height: 50px;
+			}
+			.nav>div>ul:first-child>li>a{
+				text-align: center;
+				text-decoration: none;
+				color:white;
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+			.nav>div>ul:last-child>li{
+				width: auto;
+				height: 50px;
+				line-height: 50px;
+			}
+			.nav>div>ul:first-child>li:last-child{
+				display: inline-block;
+				width: 0px;
+				height: 0px;
+				position: absolute;
+				right:10px;
+				top:20px;
+				border: 5px solid gray;
+				border-right: 5px solid #000000;
+				border-left: 5px solid #000000;
+				border-bottom: 5px solid #000000;
+			}
+			.nav>div>ul:last-child>li>.text{
+				width: 200px;
+				height: 40px;
+				background-color: whitesmoke;
+				border-radius: 5px;
+				border: 1px solid #000000;
+				box-shadow: 1px 1px 2px #808080;
+			}
+			.nav>div>ul:last-child>li>.button{
+				width: 50px;
+				background-color: #000000;
+				height: 40px;
+				border: 1px solid #ADFF2F;
+				border-radius: 5px;
+				color:#ADFF2F;
+			}
+			section{
+				display: inline-block;
+				width: 100%;
+				height: auto;
+				text-align: center;
+			}
+			section span{
+				color: palevioletred;
+				display: inline;
+			}
+			.grid-container{
+				display: grid;
+				width: auto;
+				height: auto;
+				padding: 10px;
+				grid-template-areas: 
+				'nav nav nav'
+				'section1 section1 section1'
+				'section2 section3 section4'
+				'footer footer footer';
+				
+			}
+			
+			.nav1{
+				display: none;
+			}
+			@media screen and (max-width: 966px) {
+				.grid-container{
+					display: grid;
+					width: 100%;
+					height: 800px;
+					grid-gap: 10px;
+					padding: 10px;
+					grid-template-areas: 
+					'nav1'
+					'section1'
+					'section2'
+					'section3'
+					'section4'
+					'footer';
+				}
+				.nav{
+					display: none;
+				}
+				.nav1{
+					display: block;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<article class="grid-container">
+			<nav class="gird-item nav">
+				<div>
+					<ul>
+						<li><a>Navbar</a></li>
+						<li><a>Home</a></li>
+						<li><a>Link</a></li>
+						<li><a>Disabled</a></li>
+						<li><a>Dropdown</a></li>
+						<li></li>
+					</ul>
+					<ul>
+						<li>
+							<input type="search" name="text" class="text" placeholder="search">
+							<input type="button" name="button" class="button" value="搜索">
+						</li>
+					</ul>
+				</div>
+				<div>
+					
+				</div>
+			</nav>
+			<nav class="gird-item nav1">
+				<p class="pp" style="font-size: 40px;"><i class="bi bi-card-heading"></i>
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-card-heading" viewBox="0 0 16 16">
+				  <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+				  <path d="M3 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1z"/>
+				</svg></p>
+			</nav>
+			<section class="gird-item section1" style="background-color: gainsboro;">
+				<p style="font-size: 100px;">hello,word</p>
+				<p>ccndmsf jdhfy jdftf ksjjdhfv kdj 
+				<br/>
+				<form>
+					<input type="button" style="width: 100px;height: 40px;background-color: #00FFFF;" value="learn&nbsp;more" />
+				</form>
+				</p>
+			</section>
+			<section class="gird-item section2">
+				<h1>chdg</h1>
+				<span>hcdg fjs dhgs dhvxs dhg kjasgd xyscj hdfvg hv cgfs gdcg fxsvgs gcfh cdg f jsd hgs dhvxs dhgkja sgd xys 
+				hcd gfjsd hgsd hvxs dhg kja sgdxysd xcjjkd fhuy dgfr hknzxb chefy  
+				hcdg fjsd hgsd hvxsd hgkjasgdxy sdxcjjk dfhuy dgfrhkn zxbche fy 
+				hcdg fjsd hgsd hvxs dhgk jasgd xysdx cjjkdf huyd gfrhkn zxbc hef y </span>
+			</section>
+			<section class="gird-item section3">
+				<h1>chdg</h1>
+				<span>hcdg fjs dhgs dhvxs dhg kjasgd xyscj hdfvg hv cgfs gdcg fxsvgs gcfh cdg f jsd hgs dhvxs dhgkja sgd xys
+				hcd gfjsd hgsd hvxs dhg kja sgdxysd xcjjkd fhuy dgfr hknzxb chefy  
+				hcdg fjsd hgsd hvxsd hgkjasgdxy sdxcjjk dfhuy dgfrhkn zxbche fy 
+				hcdg fjsd hgsd hvxs dhgk jasgd xysdx cjjkdf huyd gfrhkn zxbc hef y </span>
+			</section>
+			<section class="gird-item section4">
+				<h1>chdg</h1>
+				<span>hcdg fjs dhgs dhvxs dhg kjasgd xyscj hdfvg hv cgfs gdcg fxsvgs gcfh cdg f jsd hgs dhvxs dhgkja sgd xys
+				hcd gfjsd hgsd hvxs dhg kja sgdxysd xcjjkd fhuy dgfr hknzxb chefy  
+				hcdg fjsd hgsd hvxsd hgkjasgdxy sdxcjjk dfhuy dgfrhkn zxbche fy 
+				hcdg fjsd hgsd hvxs dhgk jasgd xysdx cjjkdf huyd gfrhkn zxbc hef y </span>
+			</section>
+			<footer class="gird-item footer">
+			</footer>
+		</article>
+		<script>
+		</script>
+	</body>
+</html>
