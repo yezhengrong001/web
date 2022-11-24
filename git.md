@@ -62,5 +62,8 @@
 1.创建远程仓库
 ```js
   git remote add (远程仓库)name url
-
 ```
+2.修改分支名
+`git branch -M main(分支名)`
+3.推送
+`git push -u name main`
