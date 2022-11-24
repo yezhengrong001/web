@@ -66,4 +66,10 @@
 2.修改分支名
 `git branch -M main(分支名)`
 3.推送
-`git push -u name main`
+```js
+  //推送前执行
+  git pull --rebase main master
+  //然后再执行
+  git push -u name main master
+```
+`git push -u name main master`
