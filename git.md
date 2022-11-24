@@ -27,6 +27,19 @@
 
 ## 分支
 1.查看分支
-```
+```js
   git branch
+```
+2.创建分支
+```js
+  git branch (branch)name
+```
+3.切换分支
+```js
+  git switch (branch)name
+```
+4.合并分支
+```js
+  // 所有分支合并为master分支
+  git merge master
 ```
