@@ -61,6 +61,6 @@
 ## 远程仓库
 1.创建远程仓库
 ```js
-  git remote url
+  git remote add (远程仓库)name url
 
 ```
